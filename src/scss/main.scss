@@ -132,46 +132,45 @@ a {
       }
 
        .burger {
-        border: none;
-        background: transparent;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 10;
-        margin-left: -6px;
-        display: none;
+          border: none;
+          background: transparent;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          z-index: 21;
+          margin-left: -6px;
+          display: none;
 
-        @include respond-to(md){
-          display: flex;
-        }
-             
-        &::before,
-        &::after {
-          content: "";
-          width: 22px;
-          height: 2px;
-          background: $white;
-          z-index: 10;
-        }
+          @include respond-to(md){
+            display: flex;
+          }
 
-        &::before {
-          margin-bottom: 3px;
-        }
+          &::before,
+          &::after {
+            content: "";
+            width: 22px;
+            height: 2px;
+            background: $white;
+            z-index: 10;
+          }
 
-        &::after {
-          margin-top: 3px;
-        }
+          &::before {
+            margin-bottom: 3px;
+          }
 
-        &:hover {
-          opacity: 0.75;
-        }
+          &::after {
+            margin-top: 3px;
+          }
 
-        i {
-          width: 22px;
-          height: 2px;
-          background: $white;
-        }
+          &:hover {
+            opacity: 0.75;
+          }
+
+          i {
+            width: 22px;
+            height: 2px;
+            background: $white;
+          }
       }
 
       .nav__menu {
@@ -269,6 +268,9 @@ a {
       z-index: 20;
       border-bottom-right-radius: 30px;
       display: none;
+      &.show {
+        display: block;
+      }
 
       .mobile__button{
         margin-top: 69px;

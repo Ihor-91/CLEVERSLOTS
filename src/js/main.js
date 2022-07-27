@@ -18,10 +18,10 @@ $(".slider__block").slick({
 });
 
 // burger
-document.getElementByClass(".burger").onclick = function () {
+function myFunction() {
+  document.querySelector(".menu__mobile").classList.toggle("show");
+}
+
+document.querySelector(".burger").onclick = function () {
   myFunction();
 };
-
-function myFunction() {
-  document.getElementByClass(".menu__mobile").classList.toggle("show");
-}
