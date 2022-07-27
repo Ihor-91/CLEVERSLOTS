@@ -1,16 +1,22 @@
 // font size
-$regular: 16px;
-$extraLarge: 20px;
-$large: 18px;
-$medium: 14px;
-$small: 12px;
-$extraSmall: 10px;
+$veryhude: 40px;
+$huge: 32px;
+$extralarge: 26px;
+$big: 21px;
+$regular: 20px;
+$medium: 17px;
+$small: 16px;
+$extrasmall: 15px;
+$verysmall: 14px;
+$tiny: 13px;
 
 // colors
-$primary: #b6509e;
-$secondary: #2ebac6;
+$white: #ffffff;
+$yellow: linear-gradient(93.58deg, #FFD600 0%, #FFBB36 100%);
+$blacktext: #131313;
+$grey: #323232;
+$colorIcons: #1B1B1B;
 
 // different
-$borderRadius: 2px;
-$boxShadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+$borderRadius: 50px;
 $transition: all 0.2s ease;
