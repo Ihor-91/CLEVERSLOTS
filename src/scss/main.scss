@@ -209,6 +209,19 @@ a {
             background-color: #FFBB36;
           }
         }
+
+        .btn__signOut {
+          display: none;
+        }
+
+        &.logged {
+          .btn {
+            display: none;
+          }
+          .btn__signOut {
+            display: block;
+          }
+        }
       }
     }
 
@@ -221,7 +234,7 @@ a {
 
       .header__content__text {}
 
-      .btn header__content__button {}
+      .btn .header__content__button {}
     }
   }
 }
@@ -484,7 +497,7 @@ a {
     bottom: -60px;
     right: 0;
   }
-}*/
+}
 
 //FOOTER
 .footer {
@@ -545,4 +558,14 @@ a {
       }
     }
   }
+}
+// forms
+.form {
+  &--success {
+    display: none;
+  }
+}
+
+.registration__form {
+
 }
