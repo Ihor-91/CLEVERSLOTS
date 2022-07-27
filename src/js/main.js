@@ -1,6 +1,7 @@
 import $ from "jquery";
 
 import "slick-carousel";
+import { Fancybox } from "@fancyapps/ui";
 import './registration';
 
 import "../scss/main.scss";

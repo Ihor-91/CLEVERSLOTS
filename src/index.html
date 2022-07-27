@@ -38,17 +38,26 @@
                     </ul>
                 </div>
                 <div class="nav__button" id="nav__buttons">
-                    <button class="btn btn__login">Login</button>
-                    <button class="btn btn__input">Sign Up</button>
+                    <a href="#log_form" data-fancybox>
+                        <button class="btn btn__login">Login</button>
+                    </a>
+                    <a href="#reg_form" data-fancybox>
+                        <button class="btn btn__input">Sign Up</button>
+                    </a>
                     <button class="btn btn__input btn__signOut" onclick="window.logOut()">Sign Out</button>
                 </div>
             </nav>
 
             <!-- menu mobile -->
             <div class="menu__mobile">
-                <div class="mobile__button">
-                    <button class="btn btn__login">Login</button>
-                    <button class="btn btn__input">Sign Up</button>
+                <div class="mobile__button" id="nav__buttons--mobile">
+                    <a href="#log_form" data-fancybox>
+                        <button class="btn btn__login">Login</button>
+                    </a>
+                    <a href="#reg_form" data-fancybox>
+                        <button class="btn btn__input">Sign Up</button>
+                    </a>
+                    <button class="btn btn__input btn__signOut" onclick="window.logOut()">Sign Out</button>
                 </div>
 
                 <nav class="mobile__nav">
@@ -132,46 +141,7 @@
         </section>
     </main>
 
-    <form class="registration__form" action="#" id="reg_form">
-        <h2>Create Account</h2>
-        <div class="form--success" id="reg_success">
-            <h2>Account created successfully</h2>
-        </div>
-        <div>
-            <input type="email" name="email" id="reg_email" placeholder="Your Email" />
-            <span class="form--error" id="reg_email_error"></span>
-        </div>
-        <div>
-            <input type="text" name="name" id="name" placeholder="Your Name" />
-            <span class="form--error" id="name_error"></span>
-        </div>
-        <div>
-            <input type="password" name="password" id="reg_password" placeholder="Enter Password" />
-            <span class="form--error" id="reg_password_error"></span>
-        </div>
-        <div>
-            <input type="checkbox" id="policy" name="scales">
-            <label for="policy">I agree to all statements included in Privacy Policy</label>
-            <span class="form--error" id="policy_error"></span>
-        </div>
-        <button class="btn" type="button" onclick="window.reg()">Sign Up</button>
-    </form>
 
-    <form class="login__form" action="#" id="log_form">
-        <h2>Login</h2>
-        <div class="form--success" id="log_success">
-            <h2>Login successfully</h2>
-        </div>
-        <div>
-            <input type="email" name="email" id="log_email" placeholder="Your Email" />
-            <span class="form--error" id="log_email_error"></span>
-        </div>
-        <div>
-            <input type="password" name="password" id="log_password" placeholder="Enter Password" />
-            <span class="form--error" id="log_password_error"></span>
-        </div>
-        <button class="btn" type="button" onclick="window.login()">Login</button>
-    </form>
 
     <!-- <footer class="footer">
         <div class="wrapper">
@@ -212,5 +182,74 @@
             </div>
         </div>
     </footer> -->
+
+    <!-- modals -->
+    <div class="modals">
+        <form class="form registration__form" action="#" id="reg_form">
+            <h3>Create Account</h3>
+            <div class="input__wrapper">
+                <div id="reg_email__input">
+                    <div>
+                        <img src="./img/mail.svg" alt="">
+                    </div>
+                    <input type="email" name="email" id="reg_email" placeholder="Your Email" />
+                </div>
+                <span class="form--error" id="reg_email_error"></span>
+            </div>
+            <div class="input__wrapper">
+                <div id="reg_name__input">
+                    <div>
+                        <img src="./img/name.svg" alt="">
+                    </div>
+                    <input type="text" name="name" id="name" placeholder="Your Name" />
+                </div>
+                <span class="form--error" id="name_error"></span>
+            </div>
+            <div class="input__wrapper">
+                <div id="reg_password__input">
+                    <div>
+                        <img src="./img/password.svg" alt="">
+                    </div>
+                    <input type="password" name="password" id="reg_password" placeholder="Enter Password" />
+                </div>
+                <span class="form--error" id="reg_password_error"></span>
+            </div>
+            <div class="input__wrapper checkbox">
+                <input type="checkbox" id="policy" name="policy">
+                <label for="policy" class="checkmark"></label>
+                <label for="policy">I agree to all statements included in <a href="privacy_policy.html">Privacy Policy</a></label>
+                <span class="form--error" id="policy_error"></span>
+            </div>
+
+            <div class="form--success" id="reg_success">
+                <p>Account created successfully</p>
+            </div>
+
+            <button class="btn" type="button" onclick="window.reg()">Sign Up</button>
+        </form>
+
+        <form class="form login__form" action="#" id="log_form">
+            <h3>Login</h3>
+            <div class="input__wrapper">
+                <div id="log_email__input">
+                    <div>
+                        <img src="./img/mail.svg" alt="">
+                    </div>
+                    <input type="email" name="email" id="log_email" placeholder="Your Email" />
+                </div>
+                <span class="form--error" id="log_email_error"></span>
+            </div>
+            <div class="input__wrapper">
+                <div id="log_password__input">
+                    <div>
+                        <img src="./img/password.svg" alt="">
+                    </div>
+                    <input type="password" name="password" id="log_password" placeholder="Enter Password" />
+                </div>
+                <span class="form--error" id="log_password_error"></span>
+            </div>
+            <button class="btn" type="button" onclick="window.login()">Login</button>
+        </form>
+    </div>
 </body>
 </html>
