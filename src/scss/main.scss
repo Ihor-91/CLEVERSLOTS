@@ -84,6 +84,12 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+
+    @include respond-to(md){
+      height: 60px;
+      flex-direction: row-reverse;
+    }
 
     .header__logo {
       z-index: 10;
@@ -91,14 +97,20 @@ a {
       .header__logo__link {
         display: block;
         width: 244px;
-        height: 50px;
+        
 
         @include respond-to(lg){
           width: 200px;
+
         }
 
         @include respond-to(md){
           width: 151px;
+          margin: 0 auto;
+          position: absolute;
+          right: 50%;
+          top: 15px;
+          margin-right: -76px;
         }
 
         .header__logo__img {
@@ -112,24 +124,31 @@ a {
       justify-content: space-between;
       align-items: center;
       height: 110px;
+      position:relative;
+
+      @include respond-to(md){
+        height: 60px;
+        position: relative;
+      }
 
        .burger {
-        width: 22px;
-        height: 22px;
         border: none;
         background: transparent;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 0 10px;
-        position: relative;
+        align-items: center;
         z-index: 10;
+        margin-left: -6px;
         display: none;
 
+        @include respond-to(md){
+          display: flex;
+        }
+             
         &::before,
         &::after {
           content: "";
-          position: absolute;
           width: 22px;
           height: 2px;
           background: $white;
@@ -137,16 +156,15 @@ a {
         }
 
         &::before {
-          top: 15px;
-
+          margin-bottom: 3px;
         }
 
         &::after {
-          bottom: 15px;
+          margin-top: 3px;
         }
 
         &:hover {
-          opacity: 0.70;
+          opacity: 0.75;
         }
 
         i {
@@ -158,15 +176,16 @@ a {
 
       .nav__menu {
         z-index: 100;
-        // display: none;
+
+        @include respond-to(md){
+          display: none;
+
+        }
+       
 
         .nav__list {
           display: flex;
           justify-content: space-between;
-
-          @include respond-to(md){
-            display: none;
-          }
 
           .nav__item__link {
             font-size: $regular;
@@ -218,10 +237,89 @@ a {
       .header__content__title {
         z-index: 10;
       }
+    }
 
-      .header__content__text {}
+    //menu mobile
+    .menu__mobile{
+      width: 258px;
+      max-width: 100%;
+      height: 640px;
+      background: $colorIcons;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 20;
+      border-bottom-right-radius: 30px;
 
-      .btn header__content__button {}
+      .mobile__button{
+        margin-top: 69px;
+
+        .btn{
+          padding: 0 30px;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 19px;
+          margin-left: 14px;
+          height: 39px;
+        }
+
+        .btn__login{
+          background: transparent;
+          border: 1px solid #FFD600;
+          font-weight: 300;
+          color: white;
+        }
+      }
+
+      .mobile__nav{
+        margin-top: 30px;
+
+        .mobile__nav__list{
+
+          .nav__item{
+            max-width: 258px;
+            width: 100%;
+            height:32px;
+            background-color: $grey;
+            margin-bottom: 10px;
+            color: $white;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+            background-image: url(../img/1.png);
+            background-repeat: no-repeat;
+            background-position: 15px center;
+            padding-left: 45px;
+
+            &:nth-child(2){
+              background-image: url(../img/14.png);
+            }
+
+            &:nth-child(3){
+              background-image: url(../img/2.png);
+            }
+
+            &:nth-child(4){
+              background-image: url(../img/6.png);
+            }
+
+            .mobile__nav__item__link{
+              display: block;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      .mobile__logo{
+        max-width: 151px;
+        width: 100%;
+        height: 31px;
+        margin: 284px auto 0;
+      }
     }
   }
 }
@@ -484,8 +582,7 @@ a {
     bottom: -60px;
     right: 0;
   }
-}*/
-
+}
 //FOOTER
 .footer {
   height: 562px;
