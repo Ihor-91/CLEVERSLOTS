@@ -1,6 +1,7 @@
 import $ from "jquery";
 
 import "slick-carousel";
+import './registration';
 
 import "../scss/main.scss";
 import "../index.html";
@@ -14,3 +15,5 @@ $(".slider__block").slick({
   speed: 2000,
   zIndex: 0,
 });
+
+
