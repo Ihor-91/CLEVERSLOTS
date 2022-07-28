@@ -377,7 +377,9 @@ a {
 //slider
 .slider {
 
+
   .slider__block {
+    overflow-x: hidden;
 
     .slider__item {
       height: 525px;
@@ -605,7 +607,7 @@ a {
   .wrapper__slots {
     padding-bottom: 88px;
 
-    @include respond-to(xs){
+    @include respond-to(xs) {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -614,7 +616,7 @@ a {
     .slots__conteiner {
       display: flex;
 
-      @include respond-to(xs){
+      @include respond-to(xs) {
         display: none;
       }
 
@@ -660,6 +662,7 @@ a {
             border-radius: 50px;
             border: none;
             margin-top: 15px;
+            font-weight: 600;
           }
         }
       }
@@ -670,7 +673,7 @@ a {
       display: flex;
       display: none;
 
-      @include respond-to(xs){
+      @include respond-to(xs) {
         display: flex;
       }
 
@@ -720,6 +723,7 @@ a {
               border-radius: 50px;
               border: none;
               margin-top: 15px;
+              font-weight: 600;
             }
           }
         }
@@ -730,29 +734,48 @@ a {
 
 //bannerlow
 .bannerlow {
-  height: 585px;
-  margin-top: 80px;
   background: $yellow;
   position: relative;
   z-index: 1;
   padding-top: 60px;
 
   .bannerlow__content {
-    max-width: 666px;
+    max-width: 665px;
     width: 100%;
-    margin-left: 150px;
+
+    @include respond-to(lg) {
+      max-width: 530px;
+    }
+
+    @include respond-to(md) {
+      max-width: 665px;
+    }
 
     .bannerlow__title {
       margin-bottom: 20px;
     }
 
     .bannerlow__text {
-      font-weight: 400;
-      font-size: 17px;
-      line-height: 23px;
+      padding-bottom: 180px;
+
+      @include respond-to(md) {
+        padding-bottom: 0;
+      }
 
       .bannerlow__text__item {
         margin-bottom: 10px;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 23px;
+
+        @include respond-to(sm) {
+          font-size: $medium;
+          line-height: 19px;
+        }
+
+        @include respond-to(xs){
+          font-size: $verysmall;
+        }
       }
     }
   }
@@ -761,17 +784,18 @@ a {
     position: absolute;
     bottom: -60px;
     right: 0;
+
+    @include respond-to(md) {
+      position: static;
+
+    }
   }
 }
 
 //FOOTER
 .footer {
-  height: 562px;
   background: #1B1B1B;
-  padding-top: 122px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 122px 0 50px;
 
   .footer__nav {
     width: 100%;
@@ -782,6 +806,10 @@ a {
       display: flex;
       justify-content: center;
 
+      @include respond-to(xs){
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
 
       .footer__list {
         color: $white;
@@ -789,37 +817,56 @@ a {
         font-size: 20px;
         line-height: 100%;
         margin: 20px 44px;
+
+        @include respond-to(sm){
+          font-size: 16px;
+          margin: 20px 20px;
+        }
       }
+
+      
     }
   }
 
-  .footer__logo {
-    margin-top: 60px;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    .footer__logo__link {
-      display: block;
+    .footer__logo {
+      margin-top: 60px;
 
-      .footer__logo__img {
-        width: 100%;
+      .footer__logo__link {
+        display: block;
+        width: 243px;
+        height: 50px;
+
+        .footer__logo__img {
+          width: 100%;
+        }
       }
     }
-  }
 
-  .footer__text {
-    max-width: 850px;
-    width: 100%;
-    text-align: center;
-    color: $white;
-    margin-top: 30px;
+    .footer__text {
+      max-width: 850px;
+      width: 100%;
+      text-align: center;
+      color: $white;
+      margin-top: 30px;
 
-    .footer__text__item {
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 20px;
-      margin-bottom: 10px;
+      .footer__text__item {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 10px;
 
-      &:nth-child(2) {
-        padding: 0 20px;
+        @include respond-to(sm){
+          font-size: $tiny;
+        }
+
+        &:nth-child(2) {
+          padding: 0 20px;
+        }
       }
     }
   }
