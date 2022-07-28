@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const OptimizeCssAssetWebpackPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 
 const isDev = process.env.NODE_ENV === "development";
@@ -57,6 +58,18 @@ const plugins = () => {
           to: path.resolve(__dirname, "app/assets"),
         },
       ],
+    }),
+    new FaviconsWebpackPlugin({
+      logo: "./assets/favicons/android-chrome-144x144.png",
+      mode: "webapp",
+      devMode: "webapp",
+      favicons: {
+        appName: "Cleverslots",
+        appDescription: "Best online slots at this social online casino",
+        developerName: "Ihor",
+        background: "#ffffff",
+        theme_color: "#ffffff",
+      },
     }),
   ];
 
