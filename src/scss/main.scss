@@ -16,7 +16,7 @@ body {
   margin: 0 auto;
   max-width: 1140px;
 
-  @include respond-to(lg){
+  @include respond-to(lg) {
     padding: 0 20px;
   }
 }
@@ -27,7 +27,7 @@ h1 {
   font-weight: 700;
   line-height: 67px;
 
-  @include respond-to(md){
+  @include respond-to(md) {
     font-size: $extralarge;
     line-height: 44px;
   }
@@ -50,7 +50,7 @@ h2 {
   line-height: 100%;
   cursor: pointer;
 
-  @include respond-to(lg){
+  @include respond-to(lg) {
     padding: 10px 30px;
   }
 
@@ -73,7 +73,7 @@ a {
   height: 110px;
   background: transparent;
 
-  @include respond-to(md){
+  @include respond-to(md) {
     height: 60px;
     background: $colorIcons;
   }
@@ -86,7 +86,7 @@ a {
     align-items: center;
     position: relative;
 
-    @include respond-to(md){
+    @include respond-to(md) {
       height: 60px;
       flex-direction: row-reverse;
     }
@@ -97,14 +97,14 @@ a {
       .header__logo__link {
         display: block;
         width: 244px;
-        
 
-        @include respond-to(lg){
+
+        @include respond-to(lg) {
           width: 200px;
 
         }
 
-        @include respond-to(md){
+        @include respond-to(md) {
           width: 151px;
           margin: 0 auto;
           position: absolute;
@@ -124,63 +124,63 @@ a {
       justify-content: space-between;
       align-items: center;
       height: 110px;
-      position:relative;
+      position: relative;
 
-      @include respond-to(md){
+      @include respond-to(md) {
         height: 60px;
         position: relative;
       }
 
-       .burger {
-          border: none;
-          background: transparent;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          z-index: 21;
-          margin-left: -6px;
-          display: none;
+      .burger {
+        border: none;
+        background: transparent;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 21;
+        margin-left: -6px;
+        display: none;
 
-          @include respond-to(md){
-            display: flex;
-          }
+        @include respond-to(md) {
+          display: flex;
+        }
 
-          &::before,
-          &::after {
-            content: "";
-            width: 22px;
-            height: 2px;
-            background: $white;
-            z-index: 10;
-          }
+        &::before,
+        &::after {
+          content: "";
+          width: 22px;
+          height: 2px;
+          background: $white;
+          z-index: 10;
+        }
 
-          &::before {
-            margin-bottom: 3px;
-          }
+        &::before {
+          margin-bottom: 3px;
+        }
 
-          &::after {
-            margin-top: 3px;
-          }
+        &::after {
+          margin-top: 3px;
+        }
 
-          &:hover {
-            opacity: 0.75;
-          }
+        &:hover {
+          opacity: 0.75;
+        }
 
-          i {
-            width: 22px;
-            height: 2px;
-            background: $white;
-          }
+        i {
+          width: 22px;
+          height: 2px;
+          background: $white;
+        }
       }
 
       .nav__menu {
         z-index: 100;
 
-        @include respond-to(md){
+        @include respond-to(md) {
           display: none;
 
         }
-       
+
 
         .nav__list {
           display: flex;
@@ -193,7 +193,7 @@ a {
             color: $white;
             margin-right: 30px;
 
-            @include respond-to(lg){
+            @include respond-to(lg) {
               margin-right: 20px;
               font-size: 18px;
             }
@@ -207,11 +207,11 @@ a {
         display: flex;
         justify-content: space-between;
 
-        @include respond-to(lg){
+        @include respond-to(lg) {
           width: 280px;
         }
 
-        @include respond-to(md){
+        @include respond-to(md) {
           display: none;
         }
 
@@ -241,6 +241,7 @@ a {
           .btn {
             display: none;
           }
+
           .btn__signOut {
             display: block;
           }
@@ -257,7 +258,7 @@ a {
     }
 
     //menu mobile
-    .menu__mobile{
+    .menu__mobile {
       width: 258px;
       max-width: 100%;
       height: 640px;
@@ -268,14 +269,15 @@ a {
       z-index: 20;
       border-bottom-right-radius: 30px;
       display: none;
+
       &.show {
         display: block;
       }
 
-      .mobile__button{
+      .mobile__button {
         margin-top: 69px;
 
-        .btn{
+        .btn {
           padding: 0 30px;
           font-weight: 600;
           font-size: 14px;
@@ -284,7 +286,7 @@ a {
           height: 39px;
         }
 
-        .btn__login{
+        .btn__login {
           background: transparent;
           border: 1px solid #FFD600;
           font-weight: 300;
@@ -308,21 +310,22 @@ a {
           .btn {
             display: none;
           }
+
           .btn__signOut {
             display: block;
           }
         }
       }
 
-      .mobile__nav{
+      .mobile__nav {
         margin-top: 30px;
 
-        .mobile__nav__list{
+        .mobile__nav__list {
 
-          .nav__item{
+          .nav__item {
             max-width: 258px;
             width: 100%;
-            height:32px;
+            height: 32px;
             background-color: $grey;
             margin-bottom: 10px;
             color: $white;
@@ -335,19 +338,19 @@ a {
             background-repeat: no-repeat;
             background-position: 15px center;
 
-            &:nth-child(2){
+            &:nth-child(2) {
               background-image: url(../img/14.png);
             }
 
-            &:nth-child(3){
+            &:nth-child(3) {
               background-image: url(../img/2.png);
             }
 
-            &:nth-child(4){
+            &:nth-child(4) {
               background-image: url(../img/6.png);
             }
 
-            .mobile__nav__item__link{
+            .mobile__nav__item__link {
               display: block;
               width: 100%;
               height: 100%;
@@ -358,7 +361,7 @@ a {
         }
       }
 
-      .mobile__logo{
+      .mobile__logo {
         max-width: 151px;
         width: 100%;
         height: 31px;
@@ -384,20 +387,12 @@ a {
       background-size: cover;
       margin-top: -110px;
 
-      @include respond-to(md){
+      @include respond-to(md) {
         margin-top: 0;
       }
 
-      &:nth-child(2) {
-        background-image: url(../img/banner2.png);
-      }
-
-      &:nth-child(3) {
-        background-image: url(../img/banner3.png);
-      }
-
-      &:nth-child(4) {
-        background-image: url(../img/banner4.png);
+      @include respond-to(xs) {
+        height: 640px;
       }
 
       .container {
@@ -409,9 +404,9 @@ a {
         justify-content: flex-end;
         padding-top: 142px;
 
-        @include respond-to(md){
+        @include respond-to(md) {
           justify-content: center;
-          padding: 85px 20px 0;
+          padding: 25px 20px 0;
         }
 
         .slider__item-inner {
@@ -420,9 +415,9 @@ a {
           color: $white;
           text-align: center;
 
-          .banner__title{
-            
-            @include respond-to(xs){
+          .banner__title {
+
+            @include respond-to(xs) {
               font-size: 23px;
             }
           }
@@ -433,12 +428,12 @@ a {
             line-height: 27px;
             margin-top: 10px;
 
-            @include respond-to(sm){
+            @include respond-to(sm) {
               font-size: $small;
               line-height: 22px;
             }
 
-            @include respond-to(xs){
+            @include respond-to(xs) {
               font-size: 15px;
             }
           }
@@ -446,6 +441,12 @@ a {
           .banner__button {
             margin-top: 30px;
             padding: 10px 50px;
+
+            @include respond-to(xs) {
+              width: 177px;
+              height: 43px;
+              font-size: $medium;
+            }
           }
         }
       }
@@ -453,18 +454,34 @@ a {
 
     .slider__item-first {
       background-image: url(../img/banner1.png);
+
+      @include respond-to(xs) {
+        background-image: url(../img/banner01.png);
+      }
     }
 
     .slider__item-second {
       background-image: url(../img/banner2.png);
+
+      @include respond-to(xs) {
+        background-image: url(../img/banner02.png);
+      }
     }
 
     .slider__item-third {
       background-image: url(../img/banner3.png);
+
+      @include respond-to(xs) {
+        background-image: url(../img/banner03.png);
+      }
     }
 
     .slider__item-fourth {
       background-image: url(../img/banner4.png);
+
+      @include respond-to(xs) {
+        background-image: url(../img/banner04.png);
+      }
     }
 
     .slick-list {
@@ -473,16 +490,16 @@ a {
       }
     }
 
-    .slick-dots{
+    .slick-dots {
       display: flex;
       justify-content: center;
 
-      li{
+      li {
         margin: -40px 5px 0;
         font-size: 0;
         z-index: 10;
 
-        button{
+        button {
           width: 20px;
           height: 20px;
           background: transparent;
@@ -490,90 +507,220 @@ a {
           border-radius: 50%;
           cursor: pointer;
 
-          &:hover{
+          &:hover {
             opacity: 0.75;
           }
         }
       }
-      .slick-active{
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          color: $white;
-          border: none;
-          background: $white;
-      }
 
-      
-    }
-  }
-}
-
-
-
-
-//banner
-.banner{
-  height: 525px;
-  
-  .wrapper__banner{
-    position: relative;
-
-    .banner__content{
-      width: 482px;
-      margin-top: 45px;
-      text-align: center;
-      color: $white;
-      position: absolute;
-      right: 90px;
-  
-      .banner__text{
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 27px;
-        margin-top: 10px;
-      }
-  
-      .banner__button{
-        margin-top: 30px;
+      .slick-active {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        color: $white;
+        border: none;
+        background: $white;
       }
     }
   }
 }
 
 //icons
-.icons{
-  // background: $colorIcons;
-  
-  .wrapper__icons{
-    
-    height: 302px;
-    padding-top: 60px;
-  
+.icons {
+  background: $colorIcons;
 
-    .icons__list{
-      max-width: 900px;
+  .icons__list {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 60px 0;
+
+    @include respond-to(sm) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px 0;
+    }
+
+    .icons__item {
+      max-width: 225px;
       width: 100%;
-      display: flex;
-      justify-content: space-between;
-      margin: 0 auto;
+      height: 182px;
+      text-align: center;
+      border-left: 1px solid hsla(40, 100%, 61%, 0.14);
 
-      .icons__item{
-        max-width: 225px;
-        width: 100%;
-        height: 182px;
-        text-align: center;
-        border-left: 1px solid hsla(40, 100%, 61%, 0.14);
+      @include respond-to(sm) {
+        margin: 10px 0;
+        width: 140px;
+      }
 
-        &:first-child{
+      &:first-child {
+        border: none;
+      }
+
+      &:nth-child(3) {
+        @include respond-to(sm) {
           border: none;
         }
-        
-        .icons__link{
-          display: block;
-  
-          .icon__img{
-  
+      }
+
+      .icons__link {
+        display: block;
+
+        @include respond-to(sm) {
+          width: 100px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+
+
+//slots
+.slots {
+  background: $colorIcons;
+
+  .slots__title {
+    height: 60px;
+    background: $yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 60px;
+    font-weight: 600;
+
+    @include respond-to(sm) {
+      font-size: $big;
+    }
+
+    @include respond-to(xs) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .wrapper__slots {
+    padding-bottom: 88px;
+
+    @include respond-to(xs){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .slots__conteiner {
+      display: flex;
+
+      @include respond-to(xs){
+        display: none;
+      }
+
+      .slots__item {
+        margin: 5px;
+        position: relative;
+
+        .slots__block {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          background: $grey;
+          border-radius: 16.4423px;
+          opacity: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+
+
+          &:hover {
+            opacity: 1;
+            transition: 1.5s ease-in-out;
+          }
+
+          .slots__block-text {
+            font-weight: 600;
+            font-size: $small;
+            line-height: 20px;
+            color: $white;
+            margin: 0 auto;
+          }
+
+          .slots__btn {
+            width: 119px;
+            height: 35px;
+            background: $yellow;
+            border-radius: 50px;
+            border: none;
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+
+    //slotsMobile
+    .slots__col {
+      display: flex;
+      display: none;
+
+      @include respond-to(xs){
+        display: flex;
+      }
+
+      //  display: none;
+      .slots__conteiner__mobile {
+
+
+        .slots__item {
+          margin: 5px;
+          position: relative;
+
+          .slots__block {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: $grey;
+            border-radius: 16.4423px;
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+
+            &:hover {
+              opacity: 1;
+              transition: 1.5s ease-in-out;
+            }
+
+            .slots__block-text {
+              font-weight: 600;
+              font-size: $small;
+              line-height: 20px;
+              color: $white;
+              margin: 0 auto;
+            }
+
+            .slots__btn {
+              width: 119px;
+              height: 35px;
+              background: $yellow;
+              border-radius: 50px;
+              border: none;
+              margin-top: 15px;
+            }
           }
         }
       }
@@ -581,45 +728,8 @@ a {
   }
 }
 
-//slots
-.slots{
-
-  .slots__title{
-    height: 60px;
-    background: $yellow;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 -150px 60px;
-  }
-
-  .slots__games{
-    max-width: 1148px;
-    width: 100%;
-    margin: 0 auto;
-
-    .games__big__list{
-      display: flex;
-      
-
-      .games__big__item{
-        margin: 5px;
-      }
-    }
-
-    .games__small__list{
-      display: flex;
-      
-
-      .games__small__item{
-        margin: 5px;
-      }
-    }
-  }
-}
-
-  //bannerlow
-.bannerlow{
+//bannerlow
+.bannerlow {
   height: 585px;
   margin-top: 80px;
   background: $yellow;
@@ -627,32 +737,33 @@ a {
   z-index: 1;
   padding-top: 60px;
 
-  .bannerlow__content{
+  .bannerlow__content {
     max-width: 666px;
     width: 100%;
     margin-left: 150px;
 
-    .bannerlow__title{
-     margin-bottom: 20px;
+    .bannerlow__title {
+      margin-bottom: 20px;
     }
 
-    .bannerlow__text{
+    .bannerlow__text {
       font-weight: 400;
       font-size: 17px;
       line-height: 23px;
-      
-      .bannerlow__text__item{
+
+      .bannerlow__text__item {
         margin-bottom: 10px;
       }
     }
   }
 
-  .bannerlow__img{
+  .bannerlow__img {
     position: absolute;
     bottom: -60px;
     right: 0;
   }
 }
+
 //FOOTER
 .footer {
   height: 562px;
@@ -723,13 +834,16 @@ a {
   background: $bgModals;
   color: $white;
   padding: 0;
+
   >.carousel__button.is-close {
     color: $internalText;
     top: 35px;
     right: 35px;
+
     &:hover {
       opacity: 0.7;
     }
+
     svg {
       width: 16px;
       height: 16px;
@@ -751,7 +865,8 @@ a {
     padding-bottom: 21px;
     position: relative;
     margin-bottom: 10px;
-    > div {
+
+    >div {
       border-radius: 5px;
       background: $yellow;
       padding: 2px;
@@ -759,9 +874,11 @@ a {
       display: flex;
       align-items: center;
       justify-content: center;
+
       &.error {
         background: $errorGradient;
       }
+
       div {
         position: absolute;
         left: 28px;
@@ -770,12 +887,14 @@ a {
         justify-content: center;
         width: 27px;
         height: 27px;
+
         img {
           max-width: 100%;
           max-height: 100%;
         }
       }
     }
+
     input {
       width: 100%;
       border-radius: 5px;
@@ -787,6 +906,7 @@ a {
       font-size: 17px;
       color: $white;
       font-family: "open-sans", sans-serif;
+
       &::placeholder {
         color: $textGray;
       }
@@ -798,14 +918,17 @@ a {
     font-weight: 500;
     font-size: 20px;
     cursor: pointer;
+
     @include respond-to(md) {
       font-size: 16px;
     }
+
     label {
       cursor: pointer;
     }
+
     &:hover {
-      input ~ .checkmark {
+      input~.checkmark {
         border-color: #FFBB36;
       }
     }
@@ -816,13 +939,16 @@ a {
       cursor: pointer;
       height: 0;
       width: 0;
-      &:checked ~ .checkmark {
+
+      &:checked~.checkmark {
         border-color: #FFBB36;
+
         &:after {
           display: block;
         }
       }
     }
+
     .checkmark {
       position: absolute;
       top: 3px;
@@ -834,6 +960,7 @@ a {
       border-radius: 3px;
       border: 2px solid transparent;
       transition: all 0.2s ease;
+
       &:after {
         content: "";
         position: absolute;
@@ -876,17 +1003,21 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   @include respond-to(md) {
     padding: 60px;
   }
+
   @include respond-to(xs) {
     padding: 60px 20px;
   }
+
   h3 {
     margin-bottom: 52px;
     width: 100%;
     text-align: left;
   }
+
   .btn {
     margin-top: 25px;
     width: 221px;
@@ -895,6 +1026,7 @@ a {
 
   .input__wrapper {
     width: 508px;
+
     @include respond-to(md) {
       width: 100%;
       max-width: 400px;
@@ -908,12 +1040,15 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   @include respond-to(md) {
     padding: 40px;
   }
+
   h3 {
     margin-bottom: 62px;
   }
+
   .btn {
     margin-top: 25px;
     width: 201px;
@@ -922,6 +1057,7 @@ a {
 
   .input__wrapper {
     width: 375px;
+
     @include respond-to(md) {
       width: 100%;
       max-width: 300px;

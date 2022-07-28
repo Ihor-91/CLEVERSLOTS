@@ -2,7 +2,7 @@ import $ from "jquery";
 
 import "slick-carousel";
 import { Fancybox } from "@fancyapps/ui";
-import './registration';
+import "./registration";
 
 import "../scss/main.scss";
 import "../index.html";
@@ -10,7 +10,7 @@ import "../index.html";
 //slider
 $(".slider__block").slick({
   arrows: false,
-  // autoplay: true,
+  autoplay: true,
   autoplaySpeed: 5000,
   dots: true,
   speed: 2000,
