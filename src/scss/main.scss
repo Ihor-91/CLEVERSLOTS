@@ -217,7 +217,7 @@ a {
 
         .btn__login {
           background: transparent;
-          border: 2px solid;
+          border: 1px solid;
           border-color: #FFBB36;
           color: $white;
           font-weight: 300;
@@ -334,20 +334,20 @@ a {
             line-height: 19px;
             display: flex;
             align-items: center;
-            background-image: url(../img/1.png);
+            background-image: url(../img/1.svg);
             background-repeat: no-repeat;
             background-position: 15px center;
 
             &:nth-child(2) {
-              background-image: url(../img/14.png);
+              background-image: url(../img/14.svg);
             }
 
             &:nth-child(3) {
-              background-image: url(../img/2.png);
+              background-image: url(../img/2.svg);
             }
 
             &:nth-child(4) {
-              background-image: url(../img/6.png);
+              background-image: url(../img/6.svg);
             }
 
             .mobile__nav__item__link {
@@ -376,7 +376,11 @@ a {
 
 //slider
 .slider {
+  margin-top: -110px;
 
+  @include respond-to(md) {
+    margin-top: 0;
+  }
 
   .slider__block {
     overflow-x: hidden;
@@ -387,11 +391,6 @@ a {
       background-repeat: no-repeat;
       background-position: top center;
       background-size: cover;
-      margin-top: -110px;
-
-      @include respond-to(md) {
-        margin-top: 0;
-      }
 
       @include respond-to(xs) {
         height: 640px;
@@ -433,10 +432,10 @@ a {
             @include respond-to(sm) {
               font-size: $small;
               line-height: 22px;
-            }
 
-            @include respond-to(xs) {
-              font-size: 15px;
+              @include respond-to(xs) {
+                font-size: 15px;
+              }
             }
           }
 
@@ -505,12 +504,18 @@ a {
           width: 20px;
           height: 20px;
           background: transparent;
-          border: 3px solid $white;
+          border: 2px solid $white;
           border-radius: 50%;
           cursor: pointer;
 
           &:hover {
             opacity: 0.75;
+          }
+
+          @include respond-to(sm){
+            border: 0.927273px solid #FFFFFF;
+            width: 15px;
+            height: 15px;
           }
         }
       }
@@ -522,6 +527,11 @@ a {
         color: $white;
         border: none;
         background: $white;
+
+        @include respond-to(sm){
+          width: 15px;
+          height: 15px;
+        }
       }
     }
   }
@@ -548,23 +558,57 @@ a {
 
     .icons__item {
       max-width: 225px;
+      max-width: 243px;
       width: 100%;
-      height: 182px;
       text-align: center;
       border-left: 1px solid hsla(40, 100%, 61%, 0.14);
 
       @include respond-to(sm) {
-        margin: 10px 0;
-        width: 140px;
+        padding: 10px 0;
+        max-width: 140px;
+        width: 100%;
       }
 
-      &:first-child {
+      &:nth-child(1){
         border: none;
+        
+        @include respond-to(xs){
+          border-bottom: 1px solid hsla(40, 100%, 61%, 0.14);
+        }
+      }
+
+      &:nth-child(2){
+
+        @include respond-to(xs){
+          border-bottom: 1px solid hsla(40, 100%, 61%, 0.14);
+        }
       }
 
       &:nth-child(3) {
+        @include respond-to(xs) {
+          border: none;
+        }
+      }
+
+      &:nth-child(4) {
         @include respond-to(sm) {
           border: none;
+        }
+
+        @include respond-to(xs) {
+          border-left: 1px solid hsla(40, 100%, 61%, 0.14);
+        }
+      }
+
+      .icons__text{
+        color: $white;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+
+        @include respond-to(md){
+          font-size: 13px;
+          line-height: 19px;
         }
       }
 
@@ -597,15 +641,17 @@ a {
 
     @include respond-to(sm) {
       font-size: $big;
+      height: 45px;
+      font-size: 21px;
     }
 
     @include respond-to(xs) {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
   }
 
   .wrapper__slots {
-    padding-bottom: 88px;
+    padding-bottom: 83px;
 
     @include respond-to(xs) {
       display: flex;
@@ -737,7 +783,11 @@ a {
   background: $yellow;
   position: relative;
   z-index: 1;
-  padding-top: 60px;
+  padding-top: 52px;
+
+  @include respond-to(sm){
+    padding-top: 22px;
+  }
 
   .bannerlow__content {
     max-width: 665px;
@@ -753,6 +803,10 @@ a {
 
     .bannerlow__title {
       margin-bottom: 20px;
+
+      @include respond-to(sm){
+        margin-bottom: 10px;
+      }
     }
 
     .bannerlow__text {
@@ -767,6 +821,7 @@ a {
         font-weight: 400;
         font-size: 17px;
         line-height: 23px;
+        color: #131313;
 
         @include respond-to(sm) {
           font-size: $medium;
@@ -802,6 +857,9 @@ a {
     height: 60px;
     background: $grey;
 
+    @include respond-to(sm){
+      height: 110px;
+    }
     .footer__menu {
       display: flex;
       justify-content: center;
@@ -823,8 +881,6 @@ a {
           margin: 20px 20px;
         }
       }
-
-      
     }
   }
 
@@ -844,14 +900,19 @@ a {
         .footer__logo__img {
           width: 100%;
         }
+
+        @include respond-to(sm){
+          width: 151px;
+          height: 31px;
+        }
       }
     }
 
     .footer__text {
-      max-width: 850px;
+      max-width: 865px;
       width: 100%;
       text-align: center;
-      color: $white;
+      color: #C6C6C6;
       margin-top: 30px;
 
       .footer__text__item {
@@ -862,6 +923,7 @@ a {
 
         @include respond-to(sm){
           font-size: $tiny;
+          line-height: 18px;
         }
 
         &:nth-child(2) {
