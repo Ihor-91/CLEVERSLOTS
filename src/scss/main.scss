@@ -512,7 +512,7 @@ a {
             opacity: 0.75;
           }
 
-          @include respond-to(sm){
+          @include respond-to(sm) {
             border: 0.927273px solid #FFFFFF;
             width: 15px;
             height: 15px;
@@ -528,7 +528,7 @@ a {
         border: none;
         background: $white;
 
-        @include respond-to(sm){
+        @include respond-to(sm) {
           width: 15px;
           height: 15px;
         }
@@ -569,17 +569,17 @@ a {
         width: 100%;
       }
 
-      &:nth-child(1){
+      &:nth-child(1) {
         border: none;
-        
-        @include respond-to(xs){
+
+        @include respond-to(xs) {
           border-bottom: 1px solid hsla(40, 100%, 61%, 0.14);
         }
       }
 
-      &:nth-child(2){
+      &:nth-child(2) {
 
-        @include respond-to(xs){
+        @include respond-to(xs) {
           border-bottom: 1px solid hsla(40, 100%, 61%, 0.14);
         }
       }
@@ -600,13 +600,13 @@ a {
         }
       }
 
-      .icons__text{
+      .icons__text {
         color: $white;
         font-weight: 500;
         font-size: 16px;
         line-height: 22px;
 
-        @include respond-to(md){
+        @include respond-to(md) {
           font-size: 13px;
           line-height: 19px;
         }
@@ -785,7 +785,7 @@ a {
   z-index: 1;
   padding-top: 52px;
 
-  @include respond-to(sm){
+  @include respond-to(sm) {
     padding-top: 22px;
   }
 
@@ -804,7 +804,7 @@ a {
     .bannerlow__title {
       margin-bottom: 20px;
 
-      @include respond-to(sm){
+      @include respond-to(sm) {
         margin-bottom: 10px;
       }
     }
@@ -828,7 +828,7 @@ a {
           line-height: 19px;
         }
 
-        @include respond-to(xs){
+        @include respond-to(xs) {
           font-size: $verysmall;
         }
       }
@@ -857,14 +857,15 @@ a {
     height: 60px;
     background: $grey;
 
-    @include respond-to(sm){
+    @include respond-to(sm) {
       height: 110px;
     }
+
     .footer__menu {
       display: flex;
       justify-content: center;
 
-      @include respond-to(xs){
+      @include respond-to(xs) {
         flex-wrap: wrap;
         align-items: flex-start;
       }
@@ -876,7 +877,7 @@ a {
         line-height: 100%;
         margin: 20px 44px;
 
-        @include respond-to(sm){
+        @include respond-to(sm) {
           font-size: 16px;
           margin: 20px 20px;
         }
@@ -901,7 +902,7 @@ a {
           width: 100%;
         }
 
-        @include respond-to(sm){
+        @include respond-to(sm) {
           width: 151px;
           height: 31px;
         }
@@ -921,7 +922,7 @@ a {
         line-height: 20px;
         margin-bottom: 10px;
 
-        @include respond-to(sm){
+        @include respond-to(sm) {
           font-size: $tiny;
           line-height: 18px;
         }
@@ -1192,13 +1193,96 @@ a {
   cursor: pointer;
   border-radius: 50%;
 
-  @include respond-to(sm){
+  @include respond-to(sm) {
     width: 40px;
     height: 40px;
   }
- 
+
 }
 
 #myBtn:hover {
   opacity: 0.75;
+}
+
+// Privacy Policy
+
+.header__bg {
+  background-color: $colorIcons;
+}
+
+.policy {
+  background: $colorIcons;
+
+  .policy__title {
+    width: 100%;
+    height: 165px;
+    background: $yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond-to(sm){
+      height: 60px;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 44px;
+    }
+  }
+
+  .policy__content {
+    max-width: 1140px;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 47px;
+    color: $white;
+
+    .policy__text {
+      font-size: 15px;
+      line-height: 20px;
+      margin-bottom: 10px;
+      font-weight: 400;
+
+      @include respond-to(sm){
+        font-size: 14px;
+        line-height: 19px;
+      }
+
+      .policy__link {
+        color: #FFD600;
+      }
+    }
+
+    .policy__heading {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 30px;
+      margin-bottom: 10px;
+
+      @include respond-to(sm){
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+  }
+  .policy__block{
+    display: flex;
+
+    @include respond-to(sm){
+      flex-direction: column;
+    }
+    
+    .policy__img{
+      max-width: 100%;
+      padding-left: 10px;
+
+      @include respond-to(md){
+        max-width: 320px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.footer__padding{
+  padding-top: 0;
 }
