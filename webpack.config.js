@@ -54,6 +54,13 @@ const plugins = () => {
         collapseWhitespace: isProd,
       },
     }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, "src/contact_us.html"),
+      filename: "contact_us.html",
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: `./css/${filename("css")}`,
