@@ -1173,3 +1173,32 @@ a {
     }
   }
 }
+
+//buttonScroll
+#myBtn {
+  width: 100px;
+  height: 100px;
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-image: url(../img/scroll-back-to-top-pc.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  border-radius: 50%;
+
+  @include respond-to(sm){
+    width: 40px;
+    height: 40px;
+  }
+ 
+}
+
+#myBtn:hover {
+  opacity: 0.75;
+}
