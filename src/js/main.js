@@ -13,7 +13,7 @@ $(".slider__block").slick({
   autoplay: true,
   autoplaySpeed: 5000,
   dots: true,
-  speed: 2000,
+  speed: 1000,
   zIndex: 0,
 });
 
@@ -25,3 +25,22 @@ function myFunction() {
 document.querySelector(".burger").onclick = function () {
   myFunction();
 };
+
+// button to top
+$(window).scroll(function(){
+  if($(window).scrollTop() > 400){
+    $('#toTop').fadeIn(600)
+  } else {
+    $('#toTop').fadeOut(400)
+  }
+});
+
+$("#inTop").click(function() {
+  $("html, body").animate({
+    scrollTop: $($(this).attr("href")).offset().top + "px"
+  }, {
+    duration: 500,
+    easing: "swing"
+  });
+  return false;
+});
