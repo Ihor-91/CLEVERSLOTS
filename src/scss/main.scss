@@ -385,6 +385,12 @@ a {
   .slider__block {
     overflow-x: hidden;
 
+    .slider__link{
+      &:hover{
+        opacity: 100;
+      }
+    }
+
     .slider__item {
       height: 525px;
       background-image: url(../img/banner1.png);
