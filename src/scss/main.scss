@@ -1367,3 +1367,19 @@ a {
 .footer__padding{
   padding-top: 0;
 }
+
+// Game Screen
+
+.game{
+  max-width: 100%;
+  height: 130vh;
+  background-color: $colorIcons;
+  background-image: url(../img/bgscreen.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  #iframe{
+    width: 100%;
+    height: 100%;
+  }
+}
