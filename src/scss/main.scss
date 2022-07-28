@@ -1291,6 +1291,22 @@ a {
   background-color: $colorIcons;
 }
 
+.title__copy{
+  width: 100%;
+  height: 165px;
+  background: $yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include respond-to(sm){
+    height: 60px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 44px;
+  }
+}
+
 .policy {
   background: $colorIcons;
 
@@ -1316,6 +1332,11 @@ a {
     padding-top: 60px;
     padding-bottom: 47px;
     color: $white;
+
+    @include respond-to(sm){
+      padding-top: 30px;
+      padding-bottom: 0;
+    }
 
     .policy__text {
       font-size: 15px;
@@ -1354,11 +1375,13 @@ a {
     
     .policy__img{
       max-width: 100%;
+      width: 100%;
       padding-left: 10px;
 
       @include respond-to(md){
         max-width: 320px;
         margin: 0 auto;
+        padding-left: 0;
       }
     }
   }
@@ -1368,11 +1391,253 @@ a {
   padding-top: 0;
 }
 
+.about{
+  background: $colorIcons;
+  padding-bottom: 50px;
+
+  @include respond-to(sm){
+    padding-bottom: 20px;
+  }
+
+  .about__conteiner{
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to(sm){
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    
+
+    .about__block{
+      color: $white;
+      max-width: 300px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: 60px 20px 0;
+
+      @include respond-to(sm){
+        margin: 30px 0 0;
+      }
+
+      &:nth-child(2){
+        max-width: 380px;
+
+      }
+
+      .about__block__img{
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+      }
+
+      .about__block__title{
+        margin-top: 30px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+
+        @include respond-to(sm){
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+
+      i{
+        display: block;
+        width: 75px;
+        height: 3px;
+        background-color: #FFBB36;
+        margin: 10px auto;
+
+        @include respond-to(sm){
+          width: 160px;
+          height: 1px;
+        }
+      }
+
+      .about__block__text{
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 60px;
+
+        @include respond-to(sm){
+          margin-bottom: 0;
+          font-size: 14px;
+          line-height: 19px;
+        }
+      }
+    }
+  }
+  .about__text{
+    color: $white;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 10px;
+
+    @include respond-to(sm){
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
+
+// Contact Us
+  .contact{
+
+    .contact__content{
+      padding-top: 60px;
+      display: flex;
+
+      @include respond-to(sm){
+        padding-top: 30px;
+        justify-content: center;
+      }
+
+      .contact__img{
+        max-width: 650px;
+        width: 100%;
+        margin-left: -83px;
+        margin-right: 53px;
+
+        @include respond-to(md){
+          max-width: 350px;
+          width: 100%;
+          margin-left: 0;
+        }
+
+        @include respond-to(sm){
+          display: none;
+        }
+      }
+
+      .form{
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+
+        @include respond-to(sm){
+          max-width: 320px;
+        }
+
+        .form__title{
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 44px;
+          color: $white;
+
+          @include respond-to(sm){
+            font-size: 21px;
+            line-height: 29px;
+          }
+        }
+
+        .contact__form{
+          margin-top: 38px;
+
+          @include respond-to(sm){
+            margin-top: 30px;
+          }
+
+          .success{
+            display: none;
+          }
+
+            .input__wrapper{
+              width: 100%;
+              height: 50px;
+              display: block;
+              border: 1px solid #FFD600;
+              background: transparent;
+              border-radius: 5px;
+              margin: 0 0 17px;
+              padding: 0;
+
+              @include respond-to(sm){
+                font-size: 21px;
+                line-height: 29px;
+                height: 40px;
+              }
+
+              &:nth-child(4){
+                height: 150px;
+              }
+
+              input{
+                background: transparent;
+
+                &::placeholder{
+                  font-weight: 400;
+                  font-size: 17px;
+                  line-height: 23px;
+                  position: absolute;
+                  height: 23px;
+                  left: 11px;
+                  top: 14px;
+                  color: #C6C6C6;
+
+                  @include respond-to(sm){
+                    position: absolute;
+                    height: 19px;
+                    left: 11px;
+                    top: 10px;
+                    font-size: 14px;
+                    line-height: 19px;
+                  }
+                }
+              }
+
+              textarea{
+                width: 100%;
+                height: 150px;
+                background: transparent;
+
+                &::placeholder{
+                  font-weight: 400;
+                  font-size: 17px;
+                  line-height: 23px;
+                  position: absolute;
+                  height: 23px;
+                  left: 11px;
+                  top: 14px;
+                  color: #C6C6C6;
+
+                  @include respond-to(sm){
+                    position: absolute;
+                    height: 19px;
+                    left: 11px;
+                    top: 10px;
+                    font-size: 14px;
+                    line-height: 19px;
+                  }
+                }
+              }
+            } 
+            
+            .btn{
+              margin-top: 21px;
+
+              @include respond-to(md){
+                margin-bottom: 64px;
+                margin-top: 30px;
+              }
+            }
+        }
+      }
+    }
+  }
+
 // Game Screen
 
 .game{
   max-width: 100%;
-  height: 130vh;
+  height: 80vh;
   background-color: $colorIcons;
   background-image: url(../img/bgscreen.png);
   background-repeat: no-repeat;

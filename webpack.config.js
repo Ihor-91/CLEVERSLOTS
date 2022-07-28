@@ -41,6 +41,13 @@ const plugins = () => {
       },
     }),
     new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, "src/about_us.html"),
+      filename: "about_us.html",
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new HTMLWebpackPlugin({
       template: path.resolve(__dirname, "src/privacy_policy.html"),
       filename: "privacy_policy.html",
       minify: {
@@ -50,6 +57,62 @@ const plugins = () => {
     new HTMLWebpackPlugin({
       template: path.resolve(__dirname, "src/wolf_gold_game.html"),
       filename: "wolf_gold_game.html",
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, "src/the_dog_house.html"),
+      filename: "the_dog_house.html",
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, "src/gates_of_olympus.html"),
+      filename: "gates_of_olympus.html",
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, "src/wild_west_gold.html"),
+      filename: "wild_west_gold.html",
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, "src/big_bass_bonanaza.html"),
+      filename: "big_bass_bonanaza.html",
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, "src/buffalo_king.html"),
+      filename: "buffalo_king.html",
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, "src/chilli_heat.html"),
+      filename: "chilli_heat.html",
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, "src/fortune_of_giza.html"),
+      filename: "fortune_of_giza.html",
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, "src/rainbow_gold.html"),
+      filename: "rainbow_gold.html",
       minify: {
         collapseWhitespace: isProd,
       },
