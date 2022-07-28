@@ -40,6 +40,13 @@ const plugins = () => {
         collapseWhitespace: isProd,
       },
     }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, "src/privacy_policy.html"),
+      filename: "privacy_policy.html",
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: `./css/${filename("css")}`,
@@ -103,20 +110,18 @@ module.exports = {
         test: /\.css$/i,
         use: [
           {
-            loader: isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+            loader: isDev ? "style-loader" : MiniCssExtractPlugin.loader,
             options: {
               hmr: isDev,
             },
           },
           "css-loader",
           {
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
             options: {
-              plugins: [
-                autoprefixer()
-              ],
-              sourceMap: true
-            }
+              plugins: [autoprefixer()],
+              sourceMap: true,
+            },
           },
         ],
       },
@@ -124,7 +129,7 @@ module.exports = {
         test: /\.s[ac]ss$/,
         use: [
           {
-            loader: isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+            loader: isDev ? "style-loader" : MiniCssExtractPlugin.loader,
           },
           "css-loader",
           "sass-loader",
@@ -139,14 +144,16 @@ module.exports = {
         test: /\.(?:|gif|png|jpg|jpeg|svg)$/,
         type: "asset/resource",
         generator: {
-          filename: isDev ? "img/[hash][ext][query]" : "img/[name][ext][query]" ,
+          filename: isDev ? "img/[hash][ext][query]" : "img/[name][ext][query]",
         },
       },
       {
         test: /\.(?:|woff2)$/,
         type: "asset/resource",
         generator: {
-          filename: isDev ? "fonts/[hash][ext][query]" : "fonts/[name][ext][query]" ,
+          filename: isDev
+            ? "fonts/[hash][ext][query]"
+            : "fonts/[name][ext][query]",
         },
       },
     ],
