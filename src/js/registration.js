@@ -49,16 +49,16 @@ function login() {
     passwordInput.classList.remove('error');
 
     log_form.reset();
+
     checkIfLogIn();
     Fancybox.close();
   }
 }
 
 function reg() {
-  let reg_form, reg_success, email, emailInput, emailError, name, nameInput, nameError, password, passwordInput, passwordError, policy, policyError;
+  let reg_form, email, emailInput, emailError, name, nameInput, nameError, password, passwordInput, passwordError, policy, policyError;
 
   reg_form = document.getElementById('reg_form');
-  reg_success = document.getElementById('reg_success');
   email = document.getElementById('reg_email');
   emailInput = document.getElementById('reg_email__input');
   emailError = document.getElementById('reg_email_error');
@@ -114,9 +114,6 @@ function reg() {
     localStorage.setItem("users", JSON.stringify(user_records));
     localStorage.setItem("logged", 'true');
 
-    reg_success.style.display = 'block';
-    setTimeout(() => reg_success.style.display = 'none', 5000);
-
     emailError.innerHTML = '';
     emailInput.classList.remove('error');
     nameError.innerHTML = '';
@@ -126,6 +123,9 @@ function reg() {
     policyError.innerHTML = '';
 
     reg_form.reset();
+
+    checkIfLogIn();
+    Fancybox.close();
   }
 }
 
